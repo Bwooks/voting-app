@@ -30,7 +30,64 @@ describe("app logic", function () {
             }));
         });
 
-        it("it adds winner of vote back into entries", function () {});
+        it("it adds winner of vote back into entries", function () {
+            var state = (0, _immutable.Map)({
+                "vote": (0, _immutable.Map)({
+                    "pair": _immutable.List.of("The Wire", "Fargo"),
+                    "tally": (0, _immutable.Map)({
+                        "The Wire": 4,
+                        "Fargo": 2
+                    })
+                }),
+                "entries": _immutable.List.of("Nothing1", "Nothing2")
+            });
+
+            var win = (0, _core.next)(state);
+            (0, _chai.expect)(win).to.equal((0, _immutable.Map)({
+                "vote": (0, _immutable.Map)({
+                    "pair": _immutable.List.of("Nothing1", "Nothing2")
+                }),
+                "entries": _immutable.List.of("The Wire")
+            }));
+        });
+
+        it("adds the tied pair back into entries", function () {
+            var state = (0, _immutable.Map)({
+                "vote": (0, _immutable.Map)({
+                    "pair": _immutable.List.of("Bourne Ultimatum", "The Martian"),
+                    "tally": (0, _immutable.Map)({
+                        "Bourne Ultimatum": 3,
+                        "The Martian": 3
+                    })
+                }),
+                "entries": _immutable.List.of("Good Will Hunting", "The Town", "The Departed")
+            });
+
+            var tied = (0, _core.next)(state);
+            (0, _chai.expect)(tied).to.equal((0, _immutable.Map)({
+                "entries": _immutable.List.of("The Departed", "Bourne Ultimatum", "The Martian"),
+                "vote": (0, _immutable.Map)({
+                    "pair": _immutable.List.of("Good Will Hunting", "The Town")
+                })
+            }));
+        });
+
+        it("ends voting and declares the winner when 1 entry is left", function () {
+            var state = (0, _immutable.Map)({
+                "vote": (0, _immutable.Map)({
+                    "pair": _immutable.List.of("The One", "Ong Bak"),
+                    "tally": (0, _immutable.Map)({
+                        "The One": 2,
+                        "Ong Bak": 4
+                    })
+                }),
+                "entries": _immutable.List.of()
+            });
+            var final = (0, _core.next)(state);
+            (0, _chai.expect)(final).to.equal((0, _immutable.Map)({
+                "winner": "Ong Bak"
+            }));
+        });
     });
 
     describe("tally votes for a pair of entries", function () {

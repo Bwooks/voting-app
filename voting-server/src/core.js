@@ -9,15 +9,21 @@ export function setEntries(state,entries){
 
 export function next(state){
     const entries = state.get("entries").concat(getWinners(state.get("vote")));
+    if(entries.size === 1) {
+        return state.remove("entries").remove("vote").set("winner", entries.first());
+    }
+
     let newState = state.merge({
         "vote":Map({"pair":entries.take(2)}),
         "entries":entries.skip(2)
     });
     return newState;
+
 }
 
 function getWinners(vote){
     if(!vote) return [];
+
 
     const [a,b] = vote.get("pair");
     const countA = vote.getIn(["tally",a],0);

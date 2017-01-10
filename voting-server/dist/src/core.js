@@ -21,6 +21,10 @@ function setEntries(state, entries) {
 
 function next(state) {
     var entries = state.get("entries").concat(getWinners(state.get("vote")));
+    if (entries.size === 1) {
+        return state.remove("entries").remove("vote").set("winner", entries.first());
+    }
+
     var newState = state.merge({
         "vote": (0, _immutable.Map)({ "pair": entries.take(2) }),
         "entries": entries.skip(2)
