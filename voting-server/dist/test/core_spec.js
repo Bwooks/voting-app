@@ -92,41 +92,31 @@ describe("app logic", function () {
 
     describe("tally votes for a pair of entries", function () {
         it("creates the first vote for a vote pair", function () {
-            var state = (0, _immutable.Map)({
-                "vote": (0, _immutable.Map)({ "pair": _immutable.List.of("King Kong", "No Country for Old Men") }),
-                "entries": (0, _immutable.List)()
-            });
+            var state = (0, _immutable.Map)({ "pair": _immutable.List.of("King Kong", "No Country for Old Men") });
             var voteCast = (0, _core.vote)(state, "No Country for Old Men");
             (0, _chai.expect)(voteCast).to.equal((0, _immutable.Map)({
-                "vote": (0, _immutable.Map)({
-                    "pair": _immutable.List.of("King Kong", "No Country for Old Men"),
-                    "tally": (0, _immutable.Map)({
-                        "No Country for Old Men": 1
-                    })
-                }),
-                "entries": (0, _immutable.List)()
+                "pair": _immutable.List.of("King Kong", "No Country for Old Men"),
+                "tally": (0, _immutable.Map)({
+                    "No Country for Old Men": 1
+                })
             }));
         });
 
         it("adds a vote", function () {
             var state = (0, _immutable.Map)({
-                "vote": (0, _immutable.Map)({
-                    "pair": _immutable.List.of("The Wire", "Fargo"),
-                    "tally": (0, _immutable.Map)({
-                        "The Wire": 4,
-                        "Fargo": 2
-                    })
+                "pair": _immutable.List.of("The Wire", "Fargo"),
+                "tally": (0, _immutable.Map)({
+                    "The Wire": 4,
+                    "Fargo": 2
                 })
             });
 
             var next = (0, _core.vote)(state, "Fargo");
             (0, _chai.expect)(next).to.equal((0, _immutable.Map)({
-                "vote": (0, _immutable.Map)({
-                    "pair": _immutable.List.of("The Wire", "Fargo"),
-                    "tally": (0, _immutable.Map)({
-                        "The Wire": 4,
-                        "Fargo": 3
-                    })
+                "pair": _immutable.List.of("The Wire", "Fargo"),
+                "tally": (0, _immutable.Map)({
+                    "The Wire": 4,
+                    "Fargo": 3
                 })
             }));
         });

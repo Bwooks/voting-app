@@ -11,6 +11,16 @@ var _chai = require("chai");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 describe("reducer", function () {
+
+    it("handles an undefined state", function () {
+        var state = undefined;
+        var action_Def = { type: "SET_ENTRIES", entries: ["12 Monkeys", "12 Angry Men"] };
+        var handled = (0, _reducer2.default)(state, action_Def);
+        (0, _chai.expect)(handled).to.equal((0, _immutable.Map)({
+            entries: _immutable.List.of("12 Monkeys", "12 Angry Men")
+        }));
+    });
+
     it("handles the SET_ENTRIES action", function () {
         var state = (0, _immutable.Map)();
         var action_setEntries = { type: "SET_ENTRIES", entries: ["Spiderman", "Batman Begins"] };
@@ -41,20 +51,20 @@ describe("reducer", function () {
             entries: _immutable.List.of("Training Day", "Fences"),
             vote: (0, _immutable.Map)({
                 pair: _immutable.List.of("American Gangster", "Airplane"),
-                tallies: (0, _immutable.Map)({
+                tally: (0, _immutable.Map)({
                     "American Gangster": 7,
                     "Airplane": 5
                 })
             })
         });
 
-        var action_Vote = { type: "VOTE", vote: "American Gangster" };
+        var action_Vote = { type: "VOTE", entry: "American Gangster" };
         var handled = (0, _reducer2.default)(state, action_Vote);
         (0, _chai.expect)(handled).to.equal((0, _immutable.Map)({
             entries: _immutable.List.of("Training Day", "Fences"),
             vote: (0, _immutable.Map)({
                 pair: _immutable.List.of("American Gangster", "Airplane"),
-                tallies: (0, _immutable.Map)({
+                tally: (0, _immutable.Map)({
                     "American Gangster": 8,
                     "Airplane": 5
                 })

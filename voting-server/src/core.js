@@ -3,6 +3,8 @@
  */
 import {List,Map} from 'immutable';
 
+export const INITIAL_STATE = Map();
+
 export function setEntries(state,entries){
     return state.set("entries",List(entries));
 }
@@ -32,5 +34,5 @@ function getWinners(vote){
 }
 
 export function vote(state,vote){
-    return state.updateIn(["vote","tally",vote],0,(value)=>value+1);
+    return state.updateIn(["tally",vote],0,(value)=>value+1);
 }

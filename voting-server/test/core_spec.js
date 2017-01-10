@@ -92,42 +92,32 @@ describe("app logic",()=> {
 
     describe("tally votes for a pair of entries", () => {
         it("creates the first vote for a vote pair", () => {
-            const state = Map({
-                "vote": Map({"pair": List.of("King Kong", "No Country for Old Men")}),
-                "entries": List()
-            });
+            const state = Map({"pair": List.of("King Kong", "No Country for Old Men")});
             const voteCast = vote(state, "No Country for Old Men");
             expect(voteCast).to.equal(Map({
-                "vote": Map({
                     "pair": List.of("King Kong", "No Country for Old Men"),
                     "tally": Map({
                         "No Country for Old Men": 1
                     })
-                }),
-                "entries": List()
             }));
         });
 
         it("adds a vote", () => {
             const state = Map({
-                "vote": Map({
                     "pair": List.of("The Wire", "Fargo"),
                     "tally": Map({
                         "The Wire": 4,
                         "Fargo": 2
                     })
-                })
             });
 
             const next = vote(state, "Fargo");
             expect(next).to.equal(Map({
-                "vote": Map({
                     "pair": List.of("The Wire", "Fargo"),
                     "tally": Map({
                         "The Wire": 4,
                         "Fargo": 3
                     })
-                })
             }));
 
         });

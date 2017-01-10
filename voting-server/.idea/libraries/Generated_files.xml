@@ -4,12 +4,20 @@
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/dist/test/core_spec.js" />
         <item url="file://$PROJECT_DIR$/dist/src/core.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/store.js" />
+        <item url="file://$PROJECT_DIR$/dist/test/reducer_spec.js" />
+        <item url="file://$PROJECT_DIR$/dist/src/reducer.js" />
+        <item url="file://$PROJECT_DIR$/dist/test/store_spec.js" />
         <item url="file://$PROJECT_DIR$/dist/test/immutable_spec.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/dist/test/core_spec.js" />
       <root url="file://$PROJECT_DIR$/dist/src/core.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/store.js" />
+      <root url="file://$PROJECT_DIR$/dist/test/reducer_spec.js" />
+      <root url="file://$PROJECT_DIR$/dist/src/reducer.js" />
+      <root url="file://$PROJECT_DIR$/dist/test/store_spec.js" />
       <root url="file://$PROJECT_DIR$/dist/test/immutable_spec.js" />
     </CLASSES>
     <SOURCES />
