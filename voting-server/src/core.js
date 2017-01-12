@@ -20,7 +20,6 @@ export function next(state){
         "entries":entries.skip(2)
     });
     return newState;
-
 }
 
 function getWinners(vote){
