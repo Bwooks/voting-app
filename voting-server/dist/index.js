@@ -19,5 +19,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Created by Owner on 1/11/2017.
  */
 var store = exports.store = (0, _store2.default)();
-(0, _server2.default)();
+(0, _server2.default)(store);
+
+store.dispatch({
+  type: "SET_ENTRIES",
+  entries: require("./entry.json")
+});
+store.dispatch({ type: "NEXT" });
 //# sourceMappingURL=index.js.map

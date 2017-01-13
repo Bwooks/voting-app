@@ -19,6 +19,8 @@ export function next(state){
         "vote":Map({"pair":entries.take(2)}),
         "entries":entries.skip(2)
     });
+
+    console.log(newState);
     return newState;
 }
 

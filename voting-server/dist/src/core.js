@@ -32,6 +32,8 @@ function next(state) {
         "vote": (0, _immutable.Map)({ "pair": entries.take(2) }),
         "entries": entries.skip(2)
     });
+
+    console.log(newState);
     return newState;
 }
 
