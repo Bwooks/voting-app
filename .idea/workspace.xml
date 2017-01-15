@@ -146,7 +146,8 @@
     <handled-path value="$PROJECT_DIR$/voting-server/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="619" />
+    <option name="x" value="181" />
+    <option name="y" value="9" />
     <option name="width" value="1308" />
     <option name="height" value="1047" />
   </component>
@@ -189,6 +190,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="voting-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="voting-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="voting-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="voting-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -335,15 +354,15 @@
       <workItem from="1484356759876" duration="6193000" />
       <workItem from="1484416557012" duration="12874000" />
       <workItem from="1484515174022" duration="721000" />
-      <workItem from="1484523565345" duration="23000" />
+      <workItem from="1484523565345" duration="131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23902000" />
+    <option name="totallyTimeSpent" value="24010000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="619" y="0" width="1308" height="1047" extended-state="1" />
+    <frame x="181" y="9" width="1308" height="1047" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.60835916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
