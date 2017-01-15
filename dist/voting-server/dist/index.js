@@ -13,7 +13,9 @@ var _server = require("./src/server");
 
 var _server2 = _interopRequireDefault(_server);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 /**
  * Created by Owner on 1/11/2017.
@@ -27,3 +29,4 @@ store.dispatch({
 });
 store.dispatch({ type: "NEXT" });
 //# sourceMappingURL=index.jsx.map
+//# sourceMappingURL=index.js.map
