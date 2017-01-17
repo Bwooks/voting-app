@@ -1,6 +1,9 @@
 import React from "react";
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 export default class Vote extends React.PureComponent{
+
+
     getPair(){
         return this.props.pair || [];
     }
@@ -14,6 +17,7 @@ export default class Vote extends React.PureComponent{
     }
 
     render(){
+        console.log('here');
         return (
             <div className="voting">
                 {this.getPair().map((entry)=>{

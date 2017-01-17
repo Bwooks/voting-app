@@ -66,24 +66,24 @@ describe("Voting", () => {
         expect(winner.textContent).to.contain("Shanghai Noon");
     });
 
-    it("does not re-render when state is mutated",()=>{
-       const pair = ["Nebraska","The Wrestler"];
-       const container = document.createElement("div");
-       let component = ReactDOM.render(
-           <Voting pair={pair} />, container
-       );
-       let button1 = scryRenderedDOMComponentsWithTag(component,"button")[0];
-       pair[0] = "Slumdog Millionaire";
-       component = ReactDOM.render(
-           <Voting pair={pair} />,
-           container
-       );
-        let button2;
-        let button3;
-       button1 = scryRenderedDOMComponentsWithTag(component,"button")[0];
-       expect(button1.textContent).to.equal("Nebraska");
+    it('renders as a pure component', () => {
+        const pair = ['Trainspotting', '28 Days Later'];
+        const container = document.createElement('div');
+        let component = ReactDOM.render(
+            <Voting pair={pair} />,
+            container
+        );
 
+        let firstButton = scryRenderedDOMComponentsWithTag(component, 'button')[0];
+        expect(firstButton.textContent).to.equal('Trainspotting');
 
+        pair[0] = 'Sunshine';
+        component = ReactDOM.render(
+            <Voting pair={pair} />,
+            container
+        );
+        firstButton = scryRenderedDOMComponentsWithTag(component, 'button')[0];
+        expect(firstButton.textContent).to.equal('Trainspotting');
     });
 
     it("updates DOM when a prop changes", () => {
