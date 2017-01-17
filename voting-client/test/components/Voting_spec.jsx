@@ -78,7 +78,8 @@ describe("Voting", () => {
            <Voting pair={pair} />,
            container
        );
-        let button2; //
+        let button2;
+        let button3;
        button1 = scryRenderedDOMComponentsWithTag(component,"button")[0];
        expect(button1.textContent).to.equal("Nebraska");
 
