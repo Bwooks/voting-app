@@ -1,7 +1,6 @@
 import React from "react";
 
-export default class Vote extends React.Component{
-
+export default class Vote extends React.PureComponent{
     getPair(){
         return this.props.pair || [];
     }
@@ -23,7 +22,7 @@ export default class Vote extends React.Component{
                                 disabled={this.isDisabled()}
                                 onClick={()=>this.props.vote(entry)}>
                             <h1>{entry}</h1>
-                            {this.hasVotedFor ? <div className="label"> Voted</div>:null}
+                            {this.hasVotedFor(entry) ? <div className="label"> Voted</div>:null}
                         </button>
                     )
                 })}

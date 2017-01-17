@@ -5,7 +5,7 @@ import React from "react";
 import Winner from "./Winner";
 import Vote from "./Vote";
 
-export default class Voting extends React.Component {
+export default class Voting extends React.PureComponent {
 
     render(){
         return (
