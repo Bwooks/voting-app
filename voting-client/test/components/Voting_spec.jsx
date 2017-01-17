@@ -61,7 +61,6 @@ describe("Voting", () => {
         expect(buttons.length).to.equal(0);
 
         const winner = ReactDOM.findDOMNode(rendered.refs.winner);
-        console.log(rendered);
         expect(winner).to.be.ok;
         expect(winner.textContent).to.contain("Shanghai Noon");
     });

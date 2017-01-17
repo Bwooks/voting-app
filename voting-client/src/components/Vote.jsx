@@ -17,7 +17,6 @@ export default class Vote extends React.PureComponent{
     }
 
     render(){
-        console.log('here');
         return (
             <div className="voting">
                 {this.getPair().map((entry)=>{
