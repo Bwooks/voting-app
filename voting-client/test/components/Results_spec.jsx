@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {expect} from "chai";
 import {List,Map} from "immutable";
-import Results from "../../src/components/Results";
+import {Results} from "../../src/components/Results";
 import {Simulate,renderIntoDocument,scryRenderedDOMComponentsWithClass} from "react-addons-test-utils";
 
 describe("Results",()=>{

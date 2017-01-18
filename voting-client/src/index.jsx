@@ -5,18 +5,22 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {Router,Route,hashHistory} from "react-router";
 import {createStore} from "redux";
+import {Provider,connect} from "react-redux";
+import io from "socket.io-client";
 
-import Voting from "./components/Voting";
+import {VotingContainer} from "./components/Voting";
 import App from "./components/App";
-import Results from "./components/Results";
+import {ResultsContainer} from "./components/Results";
 import reducer from "./reducer";
+
 const routes = <Route component={App}>
-        <Route path="/" component={Voting} />
-        <Route path="/results" component={Results} />
+        <Route path="/" component={VotingContainer} />
+        <Route path="/results" component={ResultsContainer} />
     </Route>;
 
-
+const socket = io(`${location.protocol}//${location.hostname}:8090`);
 const store = createStore(reducer);
+
 store.dispatch({
     type:"SET_STATE",
     vote:{
@@ -27,7 +31,12 @@ store.dispatch({
         }
     }
 });
+
+
 ReactDOM.render(
-    <Router history={hashHistory}>{routes}</Router>,
+    <Provider store={store}>
+    <Router history={hashHistory}>{routes}</Router>
+    </Provider>,
     document.getElementById("app")
 );
+
