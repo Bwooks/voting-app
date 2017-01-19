@@ -16,13 +16,19 @@ export default class Tally extends React.PureComponent{
 
     render(){
         return (
-            <div className="tally">
-            {this.getPair().map((entry)=>
-                <div className="entry">
-                    <h1>{entry}</h1>
-                    <div className="voteCount">{this.getVotes(entry)}</div>
+            <div className="results">
+
+                <div className="tally">
+                {this.getPair().map((entry)=>
+                    <div className="entry" key={entry}>
+                        <h1>{entry}</h1>
+                        <div className="voteCount">{this.getVotes(entry)}</div>
+                    </div>
+                )}
                 </div>
-            )}
+                <div className="management">
+                    <button className="next" ref="next" onClick={this.props.next}>Next</button>
+                </div>
             </div>
         );
     }

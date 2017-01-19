@@ -3,17 +3,13 @@ import {connect} from "react-redux";
 
 import Winner from "./Winner";
 import Tally from "./Tally";
-
+import * as actionCreators from "../action_creators";
 export class Results extends React.PureComponent{
 
     render(){
+
         return (
-            <div className="results">
-                {this.props.winner ? <Winner winner={this.props.winner} ref="winner"/> : <Tally {...this.props} />}
-                <div className="management">
-                    <button className="next" ref="next" onClick={this.props.next}>Next</button>
-                </div>
-            </div>
+                this.props.winner ? <Winner winner={this.props.winner} ref="winner"/> : <Tally {...this.props} />
         );
     }
 };
@@ -26,4 +22,4 @@ let mapStateToProps = (state)=>{
     }
 };
 
-export const ResultsContainer = connect(mapStateToProps)(Results);
+export const ResultsContainer = connect(mapStateToProps,actionCreators)(Results);

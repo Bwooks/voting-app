@@ -2,19 +2,29 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/dist/voting-client/src/index.js" />
         <item url="file://$PROJECT_DIR$/dist/voting-server/dist/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/voting-server/src/server.js" />
         <item url="file://$PROJECT_DIR$/dist/voting-client/webpack.config.js" />
+        <item url="file://$PROJECT_DIR$/dist/voting-client/src/action_creators.js" />
         <item url="file://$PROJECT_DIR$/dist/voting-client/test/test_helper.js" />
+        <item url="file://$PROJECT_DIR$/dist/voting-client/dist/bundle.js" />
         <item url="file://$PROJECT_DIR$/dist/voting-client/src/components/Voting.jsx.js" />
+        <item url="file://$PROJECT_DIR$/dist/voting-client/src/remote_action_middleware.js" />
+        <item url="file://$PROJECT_DIR$/dist/voting-client/src/reducer.js" />
+        <item url="file://$PROJECT_DIR$/dist/voting-client/src/index.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/dist/voting-client/src/index.js" />
       <root url="file://$PROJECT_DIR$/dist/voting-server/dist/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/voting-server/src/server.js" />
       <root url="file://$PROJECT_DIR$/dist/voting-client/webpack.config.js" />
+      <root url="file://$PROJECT_DIR$/dist/voting-client/src/action_creators.js" />
       <root url="file://$PROJECT_DIR$/dist/voting-client/test/test_helper.js" />
+      <root url="file://$PROJECT_DIR$/dist/voting-client/dist/bundle.js" />
       <root url="file://$PROJECT_DIR$/dist/voting-client/src/components/Voting.jsx.js" />
+      <root url="file://$PROJECT_DIR$/dist/voting-client/src/remote_action_middleware.js" />
+      <root url="file://$PROJECT_DIR$/dist/voting-client/src/reducer.js" />
+      <root url="file://$PROJECT_DIR$/dist/voting-client/src/index.js" />
     </CLASSES>
     <SOURCES />
   </library>
