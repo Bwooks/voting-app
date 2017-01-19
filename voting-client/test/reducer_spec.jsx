@@ -79,4 +79,82 @@ describe("Reducer",()=>{
        }));
     });
 
+    it("handles VOTE by setting hasVoted",()=>{
+       const state = fromJS({
+           vote:{
+               pair:["The Mask","Bruce Almighty"],
+               tally:{
+                   "The Mask":3,
+                   "Bruce Almighty":1
+               }
+           }
+       });
+
+       const action = {type:"VOTE", entry:"Bruce Almigthy"};
+       const nextState = (state,action);
+       expect(nextState).to.equal(fromJS({
+           vote:{
+               pair:["The Mask","Bruce Almighty"],
+               tally:{
+                   "The Mask":3,
+                   "Bruce Almighty":1
+               }
+           },
+           hasVoted:"Bruce Almigthy"
+       }));
+
+    });
+
+    it("does not set hasVoted if VOTE is for an invalid entry",()=>{
+        const state = fromJS({
+            vote:{
+                pair:["The Mask","Bruce Almighty"],
+                tally:{
+                    "The Mask":3,
+                    "Bruce Almighty":1
+                }
+            }
+        });
+
+        const action = {type:"VOTE",entry:"Moon"};
+        const nextState = reducer(state,action);
+        expect(nextState).to.equal(fromJS({
+            vote:{
+                pair:["The Mask","Bruce Almighty"],
+                tally:{
+                    "The Mask":3,
+                    "Bruce Almighty":1
+                }
+            }
+        }));
+    });
+
+    it("resets hasVoted when the voting pair changes",()=>{
+        const initState = fromJS({
+            vote:{
+                pair:["Dumb and Dumber","Ace Ventura"],
+                tally:{
+                    "Dumb and Dumber":1
+                }
+            },
+            hasVoted:"Dumb and Dumber"
+        });
+        const action = {
+            type:"SET_STATE",
+            state:{
+                vote:{
+                    pair:["Restrepo","Generation Kill"]
+                }
+            }
+        };
+        const nextState = reducer(state,action);
+        expect(nextState).to.equal(fromJS({
+            vote:{
+                pair:["Restrepo","Generation Kill"]
+            }
+        }));
+    });
+
+
+
 });

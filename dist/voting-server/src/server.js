@@ -13,6 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function startServer(store) {
     var io = new _socket2.default().attach(8090);
+
     io.on("connection", function (socket) {
         socket.emit("state", store.getState().toJS());
         socket.on("action", store.dispatch.bind(store));
