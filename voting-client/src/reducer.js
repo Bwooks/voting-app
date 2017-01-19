@@ -1,4 +1,4 @@
-import {Map} from 'immutable';
+import {List,Map} from 'immutable';
 
 function setState(state, newState) {
     return state.merge(newState);
@@ -6,8 +6,8 @@ function setState(state, newState) {
 
 function vote(state,action){
     const currentPair = state.getIn(["vote","pair"]);
-    if(currentPair && currentPair.includes(action.entry)){
-        return state.set("hasVoted",action.entry);
+    if(currentPair && currentPair.includes(action)){
+        return state.set("hasVoted",action);
     }else{
         return state;
     }

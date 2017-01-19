@@ -1,3 +1,4 @@
 node_modules/
 /dist/
 /voting-client/dist/bundle.js
+/voting-client/.babelrc
