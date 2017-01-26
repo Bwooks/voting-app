@@ -22,8 +22,8 @@ export default class Vote extends React.PureComponent{
                 {this.getPair().map((entry,index)=>{
                     const divClass = `vote_${index} vote`;
                     return (
-                        <div className={divClass}>
-                        <button key={entry}
+                        <div key={entry} className={divClass}>
+                        <button
                                 disabled={this.isDisabled()}
                                 onClick={()=>this.props.vote(entry)}>
                             <h1>{entry}</h1>

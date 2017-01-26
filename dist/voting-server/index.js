@@ -27,10 +27,13 @@ var store = exports.store = (0, _store2.default)(); /**
 
 var endpoint = "https://api.themoviedb.org/3/discover/movie?api_key=fc343979a38c148c7cd3440db5458ca5&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
 _axios2.default.get(endpoint).then(function (data) {
-    var movObjects = data.data.results;
+    var entries = data.data.results.map(function (entry) {
+        return entry.title;
+    });
+    console.log(entries);
     store.dispatch({
         type: "SET_ENTRIES",
-        entries: movObjects
+        entries: entries
     });
     store.dispatch({ type: "NEXT" });
 }).catch(function (error) {

@@ -33,7 +33,6 @@ function next(state) {
         "entries": entries.skip(2)
     });
 
-    console.log(newState);
     return newState;
 }
 
