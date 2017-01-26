@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.store = undefined;
 
@@ -13,17 +13,27 @@ var _server = require("./src/server");
 
 var _server2 = _interopRequireDefault(_server);
 
+var _axios = require("axios");
+
+var _axios2 = _interopRequireDefault(_axios);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * Created by Owner on 1/11/2017.
- */
-var store = exports.store = (0, _store2.default)();
+var store = exports.store = (0, _store2.default)(); /**
+                                                     * Created by Owner on 1/11/2017.
+                                                     */
+
 (0, _server2.default)(store);
 
-store.dispatch({
-  type: "SET_ENTRIES",
-  entries: require("./entry.json")
+var endpoint = "https://api.themoviedb.org/3/discover/movie?api_key=fc343979a38c148c7cd3440db5458ca5&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
+_axios2.default.get(endpoint).then(function (data) {
+    var movObjects = data.data.results;
+    store.dispatch({
+        type: "SET_ENTRIES",
+        entries: movObjects
+    });
+    store.dispatch({ type: "NEXT" });
+}).catch(function (error) {
+    console.log(error);
 });
-store.dispatch({ type: "NEXT" });
 //# sourceMappingURL=index.js.map
