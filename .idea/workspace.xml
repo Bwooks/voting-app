@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5f54ae7-3b70-4489-8812-39a955e4adf5" name="Default" comment="Integrating theMovieDB API to allow voting to occur based on the most popular movies released recently. Adding some much needed styling still, not yet complete.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/voting-server/index.js" afterPath="$PROJECT_DIR$/dist/voting-server/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/voting-server/index.js.map" afterPath="$PROJECT_DIR$/dist/voting-server/index.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/voting-server/src/core.js" afterPath="$PROJECT_DIR$/dist/voting-server/src/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/voting-server/src/core.js.map" afterPath="$PROJECT_DIR$/dist/voting-server/src/core.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/voting-client/dist/bundle.js" afterPath="$PROJECT_DIR$/voting-client/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/voting-client/src/components/Vote.jsx" afterPath="$PROJECT_DIR$/voting-client/src/components/Vote.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/voting-client/src/index.jsx" afterPath="$PROJECT_DIR$/voting-client/src/index.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/voting-server/index.js" afterPath="$PROJECT_DIR$/voting-server/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/voting-client/styles/main.css" afterPath="$PROJECT_DIR$/voting-client/styles/main.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,11 +22,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/voting-client/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -42,7 +35,7 @@
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/voting-client/src/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="85">
               <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#42#68#0" expanded="true" />
@@ -54,8 +47,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/voting-server/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="204">
+              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding>
                 <element signature="e#42#78#0" expanded="true" />
               </folding>
@@ -77,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/voting-server/src/core.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+              <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -86,7 +79,7 @@
       <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/voting-client/src/components/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="102">
               <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -98,7 +91,7 @@
       <file leaf-file-name="Voting.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/voting-client/src/components/Voting.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="68">
               <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
               <folding>
                 <element signature="e#42#68#0" expanded="true" />
@@ -107,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Vote.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Vote.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/voting-client/src/components/Vote.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -174,12 +167,12 @@
         <option value="$PROJECT_DIR$/voting-client/dist/index.html" />
         <option value="$PROJECT_DIR$/voting-client/webpack.config.js" />
         <option value="$PROJECT_DIR$/voting-client/src/components/App.jsx" />
-        <option value="$PROJECT_DIR$/voting-client/styles/main.css" />
-        <option value="$PROJECT_DIR$/voting-client/src/components/Vote.jsx" />
         <option value="$PROJECT_DIR$/voting-client/src/components/Voting.jsx" />
         <option value="$PROJECT_DIR$/voting-server/src/core.js" />
         <option value="$PROJECT_DIR$/voting-server/index.js" />
         <option value="$PROJECT_DIR$/voting-client/src/index.jsx" />
+        <option value="$PROJECT_DIR$/voting-client/src/components/Vote.jsx" />
+        <option value="$PROJECT_DIR$/voting-client/styles/main.css" />
       </list>
     </option>
   </component>
@@ -200,8 +193,8 @@
     <handled-path value="$PROJECT_DIR$/voting-server/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="762" />
-    <option name="width" value="1158" />
+    <option name="x" value="977" />
+    <option name="width" value="943" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -219,8 +212,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -483,7 +476,8 @@
       <workItem from="1484781795384" duration="25862000" />
       <workItem from="1484862120121" duration="45000" />
       <workItem from="1484874758668" duration="184000" />
-      <workItem from="1485385908839" duration="10121000" />
+      <workItem from="1485385908839" duration="10170000" />
+      <workItem from="1485573673516" duration="532000" />
     </task>
     <task id="LOCAL-00001" summary="Workflow changes done. Git integrated into webstorm. All my components are now pure components.">
       <created>1484626294353</created>
@@ -562,17 +556,24 @@
       <option name="project" value="LOCAL" />
       <updated>1485404725741</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="API now sanitized and server from the server as opposed to React component.">
+      <created>1485406458657</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1485406458657</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93602000" />
+    <option name="totallyTimeSpent" value="94183000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="1158" height="1047" extended-state="0" />
+    <frame x="977" y="0" width="943" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2994746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4871795" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5041237" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -609,7 +610,8 @@
     <MESSAGE value="Actions are now exchanged between client and server using Redux middleware." />
     <MESSAGE value="Middleware integrated; updates redux store on the server from client-side actions. All that remains is styling." />
     <MESSAGE value="Integrating theMovieDB API to allow voting to occur based on the most popular movies released recently. Adding some much needed styling still, not yet complete." />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrating theMovieDB API to allow voting to occur based on the most popular movies released recently. Adding some much needed styling still, not yet complete." />
+    <MESSAGE value="API now sanitized and server from the server as opposed to React component." />
+    <option name="LAST_COMMIT_MESSAGE" value="API now sanitized and server from the server as opposed to React component." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -857,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -865,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,7 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -881,9 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -899,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -907,7 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -915,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,13 +916,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/voting-client/src/components/Voting.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="68">
           <caret line="10" column="48" lean-forward="false" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
           <folding>
             <element signature="e#42#68#0" expanded="true" />
@@ -939,19 +931,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/voting-client/src/components/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="102">
           <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/voting-client/src/components/Vote.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,7 +950,7 @@
     <entry file="file://$PROJECT_DIR$/voting-server/src/core.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -981,8 +965,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/voting-server/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state relative-caret-position="204">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding>
             <element signature="e#42#78#0" expanded="true" />
           </folding>
@@ -991,7 +975,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/voting-client/src/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="85">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#42#68#0" expanded="true" />
@@ -1001,8 +985,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/voting-client/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/voting-client/src/components/Vote.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding />
         </state>
       </provider>

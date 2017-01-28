@@ -5,6 +5,9 @@ body{
 button{
     width:100%;
     height:100%;
+    background-color:#311C90;
+    border:1px inset white;
+    color:white;
 }
 .vote{
     width:50%;
