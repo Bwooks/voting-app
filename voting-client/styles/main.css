@@ -2,16 +2,25 @@ body{
     margin:0;
     padding:0;
 }
-button{
-    width:100%;
-    height:100%;
-    background-color:#311C90;
-    border:1px inset white;
-    color:white;
-}
 .vote{
-    width:50%;
+    width:49%;
     display:inline-block;
     margin:0 auto;
     height:100vh;
+}
+.vote span{
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+}
+.vote_0,.vote_1{
+    background-color:#311C90;
+    border:1px solid white;
+    color:white;
+}
+
+
+.label{
+    height:0px;
 }
