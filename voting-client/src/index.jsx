@@ -17,14 +17,14 @@ import reducer from "./reducer";
 import remoteActionMiddleware from "./remote_action_middleware";
 
 const socket = io(`${location.protocol}//${location.hostname}:8090`);
-socket.on("state", (state) =>{
-    console.log(state);
-    return store.dispatch(setState(state));
-});
-
 const store = createStore(reducer,composeWithDevTools(
     applyMiddleware(remoteActionMiddleware(socket))
 ));
+
+socket.on("state", (state) =>{
+    return store.dispatch(setState(state));
+});
+
 const routes = (<Route component={App}>
         <Route path="/results" component={ResultsContainer} />
         <Route path="/" component={VotingContainer} />

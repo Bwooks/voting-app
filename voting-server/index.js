@@ -9,17 +9,19 @@ export const store = makeStore();
 startServer(store);
 
  let endpoint = require("./entry").movApi;
+    axios.get(endpoint).then((data)=>{
+        const entries = data.data.results.map((entry)=>{
+            return entry.id
+        });
+        store.dispatch({
+            type:"SET_ENTRIES",
+            entries:entries
+        });
+        store.dispatch({type:"NEXT"});
 
- axios.get(endpoint).then((data)=>{
- let entries = data.data.results.map((entry)=>{
-     return entry.id
- });
- store.dispatch({
-     type:"SET_ENTRIES",
-     entries:entries
- });
- store.dispatch({type:"NEXT"});
- }).
- catch((error)=>{
- console.log("Error encountered:",error);
- });
+    }).
+    catch((error)=>{
+        console.log("Error encountered:",error);
+    });
+
+

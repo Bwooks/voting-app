@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.store = undefined;
 
@@ -26,17 +26,16 @@ var store = exports.store = (0, _store2.default)(); /**
 (0, _server2.default)(store);
 
 var endpoint = require("./entry").movApi;
-
 _axios2.default.get(endpoint).then(function (data) {
-  var entries = data.data.results.map(function (entry) {
-    return entry.id;
-  });
-  store.dispatch({
-    type: "SET_ENTRIES",
-    entries: entries
-  });
-  store.dispatch({ type: "NEXT" });
+    var entries = data.data.results.map(function (entry) {
+        return entry.id;
+    });
+    store.dispatch({
+        type: "SET_ENTRIES",
+        entries: entries
+    });
+    store.dispatch({ type: "NEXT" });
 }).catch(function (error) {
-  console.log("Error encountered:", error);
+    console.log("Error encountered:", error);
 });
 //# sourceMappingURL=index.js.map
