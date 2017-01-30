@@ -6,20 +6,20 @@ body{
     width:49%;
     display:inline-block;
     margin:0 auto;
-    height:100vh;
-}
-.vote span{
-    display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-}
-.vote_0,.vote_1{
     background-color:#311C90;
     border:1px solid white;
     color:white;
+    height:100vh;
+    text-align:center;
 }
-
+button{
+    height:5%;
+    line-height:5%;
+    min-width:200px;
+    color:white;
+    border:none;
+    background-color:#eec14e;
+}
 
 .label{
     height:0px;

@@ -1,0 +1,11 @@
+{
+  "movApi":{
+    "home":"https://api.themoviedb.org/3/movie",
+    "lang":"language=en-US",
+    "key":"api_key=fc343979a38c148c7cd3440db5458ca5",
+    "access":{
+      "popularList":"https://api.themoviedb.org/3/discover/movie?api_key=fc343979a38c148c7cd3440db5458ca5&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1",
+      "config":"https://api.themoviedb.org/3/configuration?api_key=fc343979a38c148c7cd3440db5458ca5"
+    }
+  }
+}
