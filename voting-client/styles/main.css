@@ -1,46 +1,56 @@
-body{
+html,body{
     margin:0;
     padding:0;
-    overflow:hidden;
-}
-.vote_wrapper{
-    height:100vh;
-    color:white;
-    text-align:center;
-    background-color:#311C90;
-    margin:0;
-
-}
-.vote{
-    width:50%;
-    margin-left:-2px;
-    display:inline-block;
-    border-left:1px solid white;
+    background-color:black;
     height:100%;
+    width:100%;
+}
+
+.votes{
+    width:100%;
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    marrgin:0;
+    padding:0;
+}
+
+.vote{
+    display:inline-block;
+    width:35%;
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+.vote button{
+    font-size:1.5vw;
+    width:100%;
 }
 .vote img{
-    width:50%;
+    width:100%;
 }
-button{
-    min-width:200px;
-    color:white;
-    border:none;
-    background-color:#eec14e;
-    font-size:16px;
-    display:block;
+.vote_0,.vote_1{
+    padding:0;
+    margin:0;
 }
 .label{
-    height:0px;
+    color:#eec14e;
+    position:absolute;
+    bottom:50%;
+    font-size:8vw;
+    font-weight:bold;
+}
+.vote_0 .label{
+    left:25%;
+}
+.vote_1 .label{
+    left:60%;
 }
 
-@media only screen and (max-width:720px){
+@media only screen and (max-width:1024px) and (min-width:319px){
     .vote{
-        display:block;
-        width:100%;
-        height:50vh;
-        border-top:1px solid white;
-    }
-    button{
-        font-size:8px;
+        width:50%;
     }
 }
+

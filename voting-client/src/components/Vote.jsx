@@ -50,7 +50,8 @@ export default class Vote extends React.Component{
 
     render(){
         return (
-            <div className="vote_wrapper">
+            <div className="vote_flex">
+                <div className="votes">
                 {this.getPair().map((entry,index)=>{
                     const divClass = `vote_${index} vote`;
                     const buttonClass = `vote_${index}`;
@@ -62,11 +63,13 @@ export default class Vote extends React.Component{
                                 disabled={this.isDisabled()}
                                 onClick={()=>this.props.vote(entry)}>
                             <h1>{this.state.titles[index]}</h1>
-                            {this.hasVotedFor(entry) ? <div className="label"> Voted</div>:null}
                             </button>
+                            {this.hasVotedFor(entry) ? <div className="label"> Voted</div>:null}
+
                         </div>
                     )
                 })}
+                </div>
             </div>
         )
     }

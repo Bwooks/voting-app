@@ -45,7 +45,7 @@ export class Voting extends React.PureComponent{
         if(this.props.pair){
             const {titles,images} = this.getMeta(this.props.pair)
             return (
-                <div className="vote_container">
+                <div className="voting_wrapper">
                     {this.props.winner ? <Winner winner={this.props.winner} ref="winner"/> : <Vote {...this.props} titles={titles} images={images}/>}
                 </div>
             )
