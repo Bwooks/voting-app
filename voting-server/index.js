@@ -11,7 +11,7 @@ startServer(store);
  let endpoint = require("./entry").movApi;
     axios.get(endpoint).then((data)=>{
         const entries = data.data.results.map((entry)=>{
-            return entry.id
+            return entry.title;
         });
         store.dispatch({
             type:"SET_ENTRIES",

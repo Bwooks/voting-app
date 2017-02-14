@@ -28,7 +28,7 @@ var store = exports.store = (0, _store2.default)(); /**
 var endpoint = require("./entry").movApi;
 _axios2.default.get(endpoint).then(function (data) {
     var entries = data.data.results.map(function (entry) {
-        return entry.id;
+        return entry.title;
     });
     store.dispatch({
         type: "SET_ENTRIES",

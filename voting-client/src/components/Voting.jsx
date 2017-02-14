@@ -14,39 +14,30 @@ export class Voting extends React.PureComponent{
         super(props);
     }
 
-    getMeta(pair){
+    getPosters(pair){
+
         const {home,lang,key} = api.movApi;
-        const titlesPair = pair.toJS();
-        const imagesPair = pair.toJS();
-        const meta = {};
-        const titles = titlesPair.map((entry)=>{
-            const endpoint = `${home}/${entry}?${key}&${lang}`;
+        const votePair = pair.toJS();
+        const posters = votePair.map((entry)=>{
+            const endpoint = `${home}/search/movie?${key}&${lang}&query=${entry}`;
             return axios.get(endpoint).then((response)=>{
-                return response.data.title;
-            }).catch((error)=>{
-                console.log(error);
-            });
-        });
-        const images = imagesPair.map((entry)=>{
-            const endpoint = `${home}/${entry}?${key}&${lang}`;
-            return axios.get(endpoint).then((response)=>{
-                const path = response.data.poster_path;
+                const path = response.data.results[0].poster_path;
                 return `https://image.tmdb.org/t/p/w500${path}`;
             }).catch((error)=>{
                 console.log("Error: ",error);
             });
         });
-        meta["titles"] = titles;
-        meta["images"] = images;
-        return meta;
+
+
+        return posters;
     }
 
     render(){
         if(this.props.pair){
-            const {titles,images} = this.getMeta(this.props.pair)
+            const posters = this.getPosters(this.props.pair);
             return (
                 <div className="voting_wrapper">
-                    {this.props.winner ? <Winner winner={this.props.winner} ref="winner"/> : <Vote {...this.props} titles={titles} images={images}/>}
+                    {this.props.winner ? <Winner winner={this.props.winner} ref="winner"/> : <Vote {...this.props} posters={posters}/>}
                 </div>
             )
         }else{

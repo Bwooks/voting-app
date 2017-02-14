@@ -1,7 +1,7 @@
 html,body{
     margin:0;
     padding:0;
-    background-color:black;
+    background-color:#19003B;
     height:100%;
     width:100%;
 }
@@ -13,20 +13,33 @@ html,body{
     justify-content:center;
     align-items:center;
     marrgin:0;
+    margin-top:2%;
     padding:0;
 }
 
 .vote{
     display:inline-block;
-    width:35%;
+    width:30%;
     padding:0;
     margin:0;
     text-align:center;
 }
 .vote button{
-    font-size:1.5vw;
+    font-size:1vw;
     width:100%;
+    color:#19003B;
+    background-color:orange;
+    border:none;
+    cursor:pointer;
 }
+.vote button:hover{
+    background-color:white;
+}
+
+.vote button:disabled {
+    background-color:grey;
+}
+
 .vote img{
     width:100%;
 }
@@ -34,20 +47,67 @@ html,body{
     padding:0;
     margin:0;
 }
-.label{
+.vote_0 button{
+    border-right:1px solid #19003B;
+}
+.vote_1 button{
+    border-left:1px solid #19003B;
+}
+.label a{
     color:#eec14e;
     position:absolute;
     bottom:50%;
     font-size:8vw;
     font-weight:bold;
 }
-.vote_0 .label{
+.vote_0 .label a{
     left:25%;
 }
-.vote_1 .label{
-    left:60%;
+.vote_1 .label a{
+    left:55%;
+}
+.results{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    height:100vh;
+    width:100%;
+    position:absolute;
+    background-color:#D86057;
 }
 
+.tally{
+    width:100%;
+    text-align:center;
+}
+.entry{
+    margin:2%;
+    font-size:2vw;
+}
+.voteCount{
+    text-align:center;
+    font-size:6vw;
+}
+.management{
+    width:100%;
+    text-align:center;
+}
+.management button{
+    width:20%;
+    height:60px;
+    font-size:30px;
+    background-color:white;
+    color:#d86057;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+.management button:hover{
+    background-color:lightgrey;
+    -webkit-transition:all 0.4s;
+}
 @media only screen and (max-width:1024px) and (min-width:319px){
     .vote{
         width:50%;

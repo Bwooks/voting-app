@@ -4,31 +4,18 @@ export default class Vote extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            titles : [],
-            images :[]
+            posters :[]
         }
     }
 
     componentWillMount(){
-        let newTitles = [];
-        let newImages = [];
-        //Titles
-        this.props.titles.map((promise)=>{
+        let newPosters = [];
+        //Posters
+        this.props.posters.map((promise)=>{
             promise.then((result)=>{
-                newTitles.push(result);
+                newPosters.push(result);
                 this.setState({
-                    titles:newTitles
-                });
-            });
-
-        });
-
-        //Images
-        this.props.images.map((promise)=>{
-            promise.then((result)=>{
-                newImages.push(result);
-                this.setState({
-                    images:newImages
+                    posters:newPosters
                 });
             });
 
@@ -57,15 +44,14 @@ export default class Vote extends React.Component{
                     const buttonClass = `vote_${index}`;
                     return (
                         <div key={entry} className={divClass}>
-                            <img src = {this.state.images[index]} className={`Img_${index}`}/>
+                            <img src = {this.state.posters[index]} className={`Img_${index}`}/>
                             <button
                              className={buttonClass}
                                 disabled={this.isDisabled()}
                                 onClick={()=>this.props.vote(entry)}>
-                            <h1>{this.state.titles[index]}</h1>
+                            <h1>{entry}</h1>
                             </button>
-                            {this.hasVotedFor(entry) ? <div className="label"> Voted</div>:null}
-
+                            {this.hasVotedFor(entry) ? <div className="label"> <a href="#results" target="_blank">Voted</a></div>:null}
                         </div>
                     )
                 })}

@@ -20,16 +20,13 @@ const socket = io(`${location.protocol}//${location.hostname}:8090`);
 const store = createStore(reducer,composeWithDevTools(
     applyMiddleware(remoteActionMiddleware(socket))
 ));
-
 socket.on("state", (state) =>{
     return store.dispatch(setState(state));
 });
-
 const routes = (<Route component={App}>
         <Route path="/results" component={ResultsContainer} />
         <Route path="/" component={VotingContainer} />
     </Route>);
-
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory}>{routes}</Router>

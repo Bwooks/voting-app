@@ -1,6 +1,6 @@
 {
   "movApi":{
-    "home":"https://api.themoviedb.org/3/movie",
+    "home":"https://api.themoviedb.org/3",
     "lang":"language=en-US",
     "key":"api_key=fc343979a38c148c7cd3440db5458ca5",
     "access":{
