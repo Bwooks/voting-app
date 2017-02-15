@@ -15,8 +15,9 @@ import {ResultsContainer} from "./components/Results";
 import {setState} from "./action_creators";
 import reducer from "./reducer";
 import remoteActionMiddleware from "./remote_action_middleware";
-
-const socket = io(`${location.protocol}//${location.hostname}:8090`);
+const PORT = process.env.PORT || 8080;
+console.log(PORT);
+const socket = io(`${location.protocol}//${location.hostname}:${PORT}`);
 const store = createStore(reducer,composeWithDevTools(
     applyMiddleware(remoteActionMiddleware(socket))
 ));

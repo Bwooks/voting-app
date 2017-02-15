@@ -1,18 +1,29 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.default = startServer;
-
-var _socket = require("socket.io");
-
-var _socket2 = _interopRequireDefault(_socket);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
+/**
+ * Created by Owner on 1/11/2017.
+ */
+var http = require('http');
+var express = require('express');
+var socketio = require('socket.io');
+var path = require('path');
 function startServer(store) {
-    var io = new _socket2.default().attach(8090);
+
+    var PORT = process.env.PORT || 8080;
+    var INDEX = path.join(__dirname, "../..", "voting-client", "dist/index.html");
+    var app = express();
+    var server = http.createServer(app);
+    var io = socketio.listen(server);
+    server.listen(PORT);
+
+    app.use(express.static(path.join(__dirname, "../..", "voting-client/dist")));
+    app.get("*", function (req, res) {
+        res.sendFile(INDEX);
+    });
 
     io.on("connection", function (socket) {
         socket.emit("state", store.getState().toJS());
@@ -22,7 +33,5 @@ function startServer(store) {
     store.subscribe(function () {
         io.emit("state", store.getState().toJS());
     });
-} /**
-   * Created by Owner on 1/11/2017.
-   */
+}
 //# sourceMappingURL=server.js.map

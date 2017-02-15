@@ -18,6 +18,7 @@ export class Voting extends React.PureComponent{
 
         const {home,lang,key} = api.movApi;
         const votePair = pair.toJS();
+        const movieInfo = {};
         const posters = votePair.map((entry)=>{
             const endpoint = `${home}/search/movie?${key}&${lang}&query=${entry}`;
             return axios.get(endpoint).then((response)=>{
@@ -28,8 +29,7 @@ export class Voting extends React.PureComponent{
             });
         });
 
-
-        return posters;
+         return posters;
     }
 
     render(){

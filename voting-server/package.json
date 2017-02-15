@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",
+    "postinstall":"cd ../voting-client && npm run production",
     "test": "mocha --compilers js:babel-core/register --recursive",
     "test:watch": "npm run test -- --watch"
   },
@@ -26,6 +27,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "express": "^4.14.1",
     "immutable": "^3.8.1",
     "node-cache": "^4.1.1",
     "redux": "^3.6.0",

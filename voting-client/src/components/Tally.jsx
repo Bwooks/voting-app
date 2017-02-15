@@ -20,7 +20,10 @@ export default class Tally extends React.PureComponent{
         }
         return 0;
     }
-
+    checking(){
+        console.log(window.opener,window.opener.location,window.opener.location.reload(true),this.refs);
+        this.props.next();
+    }
     render(){
         return (
             <div className="results">
@@ -34,7 +37,7 @@ export default class Tally extends React.PureComponent{
                     )}
                 </div>
                 <div className="management">
-                    <button className="next" ref="next" onClick={this.props.next}>Next</button>
+                    <button className="next" ref="next" onClick={this.checking.bind(this)}>Next</button>
                 </div>
             </div>
         );

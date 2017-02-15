@@ -34,6 +34,9 @@ export default class Vote extends React.Component{
         return entry === this.props.hasVoted;
     }
 
+    openResults(){
+        window.open("#results");
+    }
 
     render(){
         return (
@@ -48,10 +51,11 @@ export default class Vote extends React.Component{
                             <button
                              className={buttonClass}
                                 disabled={this.isDisabled()}
-                                onClick={()=>this.props.vote(entry)}>
+                                onClick={()=> this.props.vote(entry)}
+                            >
                             <h1>{entry}</h1>
                             </button>
-                            {this.hasVotedFor(entry) ? <div className="label"> <a href="#results" target="_blank">Voted</a></div>:null}
+                            {this.hasVotedFor(entry) ? <div className="label"><a onClick={this.openResults}>Results</a></div>:null}
                         </div>
                     )
                 })}
