@@ -4,6 +4,7 @@ html,body{
     background-color:#19003B;
     height:100%;
     width:100%;
+    min-width:319px;
 }
 
 .votes{
@@ -59,12 +60,16 @@ html,body{
     bottom:50%;
     font-size:8vw;
     font-weight:bold;
+    cursor:pointer;
+}
+.label a:hover{
+    color:white;
 }
 .vote_0 .label a{
-    left:25%;
+    left:22%;
 }
 .vote_1 .label a{
-    left:55%;
+    left:52%;
 }
 .results{
     display:flex;
@@ -94,7 +99,7 @@ html,body{
     width:100%;
     text-align:center;
 }
-.management button{
+.next{
     width:20%;
     height:60px;
     font-size:30px;
@@ -104,13 +109,26 @@ html,body{
     font-weight:bold;
     cursor:pointer;
 }
-.management button:hover{
+.next:hover{
     background-color:lightgrey;
     -webkit-transition:all 0.4s;
 }
 @media only screen and (max-width:1024px) and (min-width:319px){
     .vote{
         width:50%;
+    }
+    .vote_0 .label,.vote_1 .label{
+        cursor:pointer;
+    }
+    .vote_0 .label a{
+        left:10%;
+    }
+    .vote_1 .label a{
+        left:40%;
+    }
+    .next{
+        width:50%;
+        height:40px;
     }
 }
 
